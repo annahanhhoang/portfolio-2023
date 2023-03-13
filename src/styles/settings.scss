@@ -1,0 +1,14 @@
+/**
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+//https://next.vuetifyjs.com/features/sass-variables/`
+@forward 'vuetify/settings' with (
+  $button-background: #f8f9fa,
+  $button-color: #3c4043,
+  $button-font-weight: 400,
+  $button-line-height: 27px,
+  $color-pack: false,
+  $field-border-radius: 50px,
+  $field-control-affixed-padding: 20px
+);
