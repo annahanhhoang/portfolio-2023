@@ -12,8 +12,10 @@
 </template>
 
 <script lang="ts">
-export default {
-  data() {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  setup() {
     return {
       accounts: [
         {
@@ -27,5 +29,5 @@ export default {
       ],
     };
   },
-};
+});
 </script>

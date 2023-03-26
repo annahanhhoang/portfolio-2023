@@ -26,7 +26,7 @@
         been to.
       </p>
 
-      <templat v-if="$vuetify.display.lgAndUp">
+      <templat v-if="lgAndUp">
         <h2 class="text-h4 text-primary mb-4">Interesting facts about me</h2>
         <ul class="ml-4 mb-4">
           <li>I haved moved across the globe for a job paying 1/6 of what I had made</li>
@@ -81,7 +81,7 @@
     <!--
       RIGHT COLUMN
     -->
-    <v-col v-if="$vuetify.display.mdAndUp" md="5" offset-xl="2" xl="4">
+    <v-col v-if="mdAndUp" md="5" offset-xl="2" xl="4">
       <!--
         SIDE IMAGE SECTION
       -->
@@ -94,14 +94,22 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
+import { useDisplay } from 'vuetify';
+
 import Resume from '@/components/ResumeDownload.vue';
 
-export default {
+export default defineComponent({
   components: {
     // Resume download component
     Resume,
   },
-};
+
+  setup() {
+    const { mdAndUp, lgAndUp } = useDisplay();
+    return { mdAndUp, lgAndUp };
+  },
+});
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@
     class="resume-page mx-auto"
     elevation="24"
     rounded="0"
-    :width="$vuetify.display.mdAndUp ? '8.5in' : '100%'"
+    :width="mdAndUp ? '8.5in' : '100%'"
   >
     <div class="resume-page-content">
       <!--
@@ -120,18 +120,22 @@
     </div>
   </v-card>
 </template>
+
 <script lang="ts">
-export default {
-  data: () => ({
-    skills: [
+import { defineComponent } from 'vue';
+import { useDisplay } from 'vuetify';
+
+export default defineComponent({
+  setup() {
+    const skills = [
       'Strong expertise in HTML 5, CSS 3, SASS, JavaScript, Vue.js, Vuex, Nuxt.js, NodeJS (Express)',
       'Proficient in responsive design using Vuetify and Bootstrap',
       'Proficient in various web development tools such as Git, JIRA, and Visual Studio Code',
       'Proficient in various Database tools, such as Microsoft SQL Server, MySQL, Oracle, MongoDB',
       'Familiar with CI tools such as GitLab CI and GitHub Action',
       'Strong problem-solving and communication skills',
-    ],
-    experiences: [
+    ];
+    const experiences = [
       {
         company: 'LTK',
         location: 'Dallas, Texas',
@@ -224,13 +228,13 @@ export default {
           'Microsoft SQL server',
         ],
       },
-    ],
-    additionalInfo: [
+    ];
+    const additionalInfo = [
       'Recognized as a top-performing employee with the Employee of the Month award in July 2022, in recognition of consistently delivering exceptional results and going above and beyond in all areas of responsibility.',
       "Triumphed over 25 teams to emerge victorious in the JPMorgan Chase Technology Analyst 2015 competition, delivering a fully-tested and production-ready task manager web app designed to facilitate JPMC's go-live events.",
       'Gave back to the community by volunteering with the JPMorgan Chase Technology for Social Good program, helping non-governmental organizations to optimize their websites and enhance their online presence. ',
-    ],
-    edu: [
+    ];
+    const edu = [
       {
         school: 'UNIVERSITY OF TEXAS AT DALLAS',
         degree: 'Bachelor of Science in Software Engineering',
@@ -248,9 +252,13 @@ export default {
           'Math Association of America Calculus Bowl finalists',
         ],
       },
-    ],
-  }),
-};
+    ];
+
+    const { mdAndUp } = useDisplay();
+
+    return { skills, experiences, additionalInfo, edu, mdAndUp };
+  },
+});
 </script>
 
 <style lang="scss" scoped>

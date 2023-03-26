@@ -8,17 +8,19 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
+
 import about from '@/views/About.vue';
 import experience from '@/views/Experience.vue';
 import skill from '@/views/Skills.vue';
 import projects from '@/views/Projects.vue';
 
-export default {
+export default defineComponent({
   components: {
     about,
     experience,
     skill,
     projects,
   },
-};
+});
 </script>

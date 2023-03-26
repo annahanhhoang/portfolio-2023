@@ -23,7 +23,7 @@
             </template>
           </v-text-field>
         </v-col>
-        <v-col v-if="$vuetify.display.mdAndUp" md="12" class="text-md-center">
+        <v-col v-if="mdAndUp" md="12" class="text-md-center">
           <v-btn variant="flat" class="text-capitalize mr-4">Google Search</v-btn>
 
           <v-btn variant="flat" class="text-capitalize ml-4">I'm feeling lucky</v-btn>
@@ -34,16 +34,24 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'landing',
-  mounted() {
-    const vm = this;
+import { defineComponent, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import { useDisplay } from 'vuetify';
 
-    setTimeout(() => {
-      vm.$router.push({ name: 'home' });
-    }, 6500);
+export default defineComponent({
+  setup() {
+    onMounted(() => {
+      const router = useRouter();
+
+      setTimeout(() => {
+        router.push({ name: 'home' });
+      }, 6500);
+    });
+
+    const { mdAndUp } = useDisplay();
+    return { mdAndUp };
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>

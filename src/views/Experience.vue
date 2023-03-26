@@ -2,15 +2,15 @@
   <div class="experience-page">
     <h2 class="text-h4 text-primary mb-4">Where I have been</h2>
     <v-timeline
-      :class="['mx-auto', { 'w-75': $vuetify.display.lgAndUp }]"
-      :density="$vuetify.display.smAndDown ? 'compact' : 'default'"
+      :class="['mx-auto', { 'w-75': lgAndUp }]"
+      :density="smAndDown ? 'compact' : 'default'"
     >
       <v-timeline-item
         v-for="(item, index) in experiences"
         :key="`experience${index}`"
         dot-color="primary"
       >
-        <template v-if="$vuetify.display.mdAndUp" v-slot:opposite>
+        <template v-if="mdAndUp" v-slot:opposite>
           <span class="timeline-duration">{{ item.duration }}</span>
         </template>
 
@@ -33,9 +33,12 @@
 </template>
 
 <script lang="ts">
-export default {
-  data: () => ({
-    experiences: [
+import { defineComponent } from 'vue';
+import { useDisplay } from 'vuetify';
+
+export default defineComponent({
+  setup() {
+    const experiences = [
       {
         company: 'LTK',
         position: 'Senior Software Engineer II',
@@ -85,7 +88,11 @@ export default {
           'Microsoft SQL server',
         ],
       },
-    ],
-  }),
-};
+    ];
+
+    const { mdAndUp, lgAndUp, smAndDown } = useDisplay();
+
+    return { experiences, mdAndUp, lgAndUp, smAndDown };
+  },
+});
 </script>

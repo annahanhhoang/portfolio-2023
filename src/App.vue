@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar v-if="$vuetify.display.mdAndDown" position="fixed" class="no-print">
+    <v-app-bar v-if="mdAndDown" position="fixed" class="no-print">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <social-link class="mr-4" :xl="true"></social-link>
@@ -36,7 +36,7 @@
         </v-list-item>
       </v-list>
       <template v-slot:append>
-        <social-link v-if="$vuetify.display.mdAndUp" class="mb-6"></social-link>
+        <social-link v-if="mdAndUp" class="mb-6"></social-link>
       </template>
     </v-navigation-drawer>
 
@@ -50,7 +50,7 @@
     </v-main>
 
     <v-footer
-      v-if="$route.name !== 'resume'"
+      v-if="route.name !== 'resume'"
       app
       height="auto"
       class="justify-center align-center no-print"
@@ -65,67 +65,73 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+import { useDisplay } from 'vuetify';
+
 import SocialLink from '@/components/SocialLink.vue';
 
-export default {
+export default defineComponent({
   components: {
     SocialLink,
   },
-  data() {
-    return {
-      drawer: false,
-      menu: [
-        { title: 'Home', icon: 'mdi-home', to: '/home' },
-        {
-          title: 'About Me',
-          icon: 'mdi-account',
-          to: '/home#about-section',
-          target: '_self',
-        },
-        {
-          title: 'Experience',
-          icon: 'mdi-briefcase',
-          to: '/home#experience-section',
-          target: '_self',
-        },
-        {
-          title: 'Skills and Educations',
-          icon: 'mdi-school',
-          to: '/home#skill-section',
-          target: '_self',
-        },
-        {
-          title: 'My Projects',
-          icon: 'mdi-lightbulb-on',
-          to: '/home#projects-section',
-          target: '_self',
-        },
-        {
-          title: 'Resume',
-          icon: 'mdi-file',
-          to: '/resume',
-          target: '_blank',
-        },
-      ],
-      showFooter: true,
-      currentYear: new Date().getFullYear(),
-    };
-  },
+  setup() {
+    const route = useRoute();
 
-  beforeMount() {
-    this.toggleScroll();
-    this.toggleDrawer();
-  },
+    const drawer = ref(false);
+    const menu = [
+      { title: 'Home', icon: 'mdi-home', to: '/home' },
+      {
+        title: 'About Me',
+        icon: 'mdi-account',
+        to: '/home#about-section',
+        target: '_self',
+      },
+      {
+        title: 'Experience',
+        icon: 'mdi-briefcase',
+        to: '/home#experience-section',
+        target: '_self',
+      },
+      {
+        title: 'Skills and Educations',
+        icon: 'mdi-school',
+        to: '/home#skill-section',
+        target: '_self',
+      },
+      {
+        title: 'My Projects',
+        icon: 'mdi-lightbulb-on',
+        to: '/home#projects-section',
+        target: '_self',
+      },
+      {
+        title: 'Resume',
+        icon: 'mdi-file',
+        to: '/resume',
+        target: '_blank',
+      },
+    ];
+    const currentYear = new Date().getFullYear();
 
-  methods: {
-    // hide drawer for landing and resume page
-    toggleDrawer() {
-      this.drawer = this.$route.name !== 'landing' && this.$route.name !== 'resume';
-    },
+    const { mdAndDown, mdAndUp } = useDisplay();
+
+    watch(
+      route,
+      () => {
+        toggleScroll();
+        toggleDrawer();
+      },
+      { deep: true, immediate: true }
+    );
+
+    function toggleDrawer() {
+      drawer.value = route.name !== 'landing' && route.name !== 'resume';
+    }
 
     // disable scrolling for landing page
-    toggleScroll() {
-      const scroll = this.$route.name !== 'landing';
+    function toggleScroll() {
+      const scroll = route.name !== 'landing';
 
       if (!scroll) {
         document.body.className = 'no-scroll';
@@ -133,17 +139,20 @@ export default {
       } else {
         document.documentElement.classList.remove('no-scroll');
       }
-    },
-  },
+    }
 
-  watch: {
-    // watch when user navigate to new page to hide/show drawer and disable/enable scroll
-    $route() {
-      this.toggleScroll();
-      this.toggleDrawer();
-    },
+    return {
+      drawer,
+      menu,
+      currentYear,
+      route,
+      mdAndDown,
+      mdAndUp,
+      toggleScroll,
+      toggleDrawer,
+    };
   },
-};
+});
 </script>
 
 <style lang="scss">

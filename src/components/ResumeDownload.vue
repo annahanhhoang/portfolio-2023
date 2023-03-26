@@ -7,8 +7,10 @@
 </template>
 
 <script lang="ts">
-export default {
-  data() {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  setup() {
     return {
       resumes: [
         {
@@ -24,5 +26,5 @@ export default {
       ],
     };
   },
-};
+});
 </script>

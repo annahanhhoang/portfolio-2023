@@ -28,7 +28,7 @@
                   :key="i"
                   :src="imageURL(tech.path)"
                   height="35"
-                  :width="$vuetify.display.lgAndUp ? 100 : 75"
+                  :width="logoWidth"
                 />
               </v-col>
               <v-col cols="12" md="7" lg="9">
@@ -52,9 +52,14 @@
 </template>
 
 <script lang="ts">
-export default {
-  data: () => ({
-    projects: [
+import { defineComponent, computed } from 'vue';
+import { useDisplay } from 'vuetify';
+
+export default defineComponent({
+  setup() {
+    const { name } = useDisplay();
+
+    const projects = [
       {
         name: 'LTK',
         link: 'https://www.shopltk.com/',
@@ -171,18 +176,16 @@ export default {
         ],
         src: 'tracker.jpg',
       },
-    ],
-  }),
+    ];
 
-  computed: {
-    imageURL() {
+    const imageURL = computed(() => {
       return (name: string) => {
         return name ? new URL(`/src/assets/${name}`, import.meta.url).href : null;
       };
-    },
+    });
 
-    carouselHeight() {
-      switch (this.$vuetify.display.name) {
+    const carouselHeight = computed(() => {
+      switch (name.value) {
         case 'xl':
         case 'lg':
           return 750;
@@ -191,7 +194,24 @@ export default {
         default:
           return 650;
       }
-    },
+    });
+
+    const logoWidth = computed(() => {
+      switch (name.value) {
+        case 'xl':
+        case 'lg':
+          return 100;
+        default:
+          return 75;
+      }
+    });
+
+    return {
+      projects,
+      imageURL,
+      carouselHeight,
+      logoWidth,
+    };
   },
-};
+});
 </script>
