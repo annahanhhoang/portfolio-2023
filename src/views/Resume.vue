@@ -34,7 +34,7 @@
           <v-col cols="12" sm="5">
             <p>
               <v-icon class="mr-2" color="primary" icon="mdi-web" />
-              <a href="https://asianna.github.io">https://asianna.github.io</a>
+              <a href="https://annahoang.dev">https://annahoang.dev</a>
             </p>
           </v-col>
           <v-col cols="12">
