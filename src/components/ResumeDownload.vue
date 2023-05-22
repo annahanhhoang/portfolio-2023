@@ -21,7 +21,7 @@ export default defineComponent({
         {
           id: 'PDF',
           icon: 'mdi-file-pdf-box',
-          link: 'https://drive.google.com/file/d/1qO7ylOofaKYBZUC551R5mVf3qmtrQlKW/view?usp=share_link',
+          link: 'https://drive.google.com/file/d/1-4odqAIn-GyLpVp8_CRR5LJVn6bQ3etv/view?usp=share_link',
         },
       ],
     };
