@@ -64,7 +64,7 @@ export default defineComponent({
         name: 'LTK',
         link: 'https://www.shopltk.com/',
         date: 'March 2020 - March 2023',
-        desc: 'LTK is a platform that allows that allows users to shop directly from their favorite creators on Instagram, TikTok, and other social media sites. LTK also allows creators to monetize their content by earning a commission on the products their followers purchase through the platform.',
+        desc: 'LTK is a platform that allows users to shop directly from their favorite creators on Instagram, TikTok, and other social media sites. LTK also allows creators to monetize their content by earning a commission on the products their followers purchase through the platform.',
         techList: [
           {
             name: 'Vue.js',

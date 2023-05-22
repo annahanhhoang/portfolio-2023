@@ -18,7 +18,7 @@
         I have over 10 years of experience working as a web/software developer. I have worked in big
         corporates (J.P.Morgan, Fujitsu Network Communication, etc.) as well as small start-up
         environment. Professionally, I specialize in Vue.js, Nuxt, Vuetify, Node.js (Express). I can
-        also do databse/server management and basic graphic design.
+        also do database/server management and basic graphic design.
       </p>
       <p class="mb-4">
         When I'm not sitting in front of a laptop, I specialize in hopping around. I've travelled to
