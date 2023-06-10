@@ -14,7 +14,7 @@
     <v-navigation-drawer v-model="drawer" class="app-side-menu">
       <v-list>
         <v-list-item class="text-center">
-          <v-img class="mt-4" src="@/assets/logo.jpg" width="100%" />
+          <v-img class="mt-4 mx-auto" src="@/assets/logo.svg" width="192" height="192" />
 
           <p class="text-h4">Anna Hoang</p>
 
