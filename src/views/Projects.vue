@@ -23,11 +23,11 @@
 
                 <v-img
                   v-for="(tech, i) in item.techList"
-                  class="d-inline-block"
+                  height="35"
+                  inline
                   :alt="tech.name"
                   :key="i"
                   :src="imageURL(tech.path)"
-                  height="35"
                   :width="logoWidth"
                 />
               </v-col>
