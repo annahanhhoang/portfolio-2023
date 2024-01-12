@@ -26,7 +26,7 @@
         been to.
       </p>
 
-      <templat v-if="lgAndUp">
+      <template v-if="lgAndUp">
         <h2 class="text-h4 text-primary mb-4">Interesting facts about me</h2>
         <ul class="ml-4 mb-4">
           <li>I haved moved across the globe for a job paying 1/6 of what I had made</li>
@@ -44,7 +44,7 @@
             wear it, but it's OK :)
           </li>
         </ul>
-      </templat>
+      </template>
 
       <p class="mb-2">Like what you see? I can be reached at:</p>
 
