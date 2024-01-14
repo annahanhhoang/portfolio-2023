@@ -1,6 +1,11 @@
 <template>
   <span class="resume">
-    <a class="mr-1 text-decoration-none" v-for="item in resumes" :key="item.id" :href="item.link">
+    <a
+      class="mr-1 text-decoration-none"
+      v-for="item in resumes"
+      :key="item.id"
+      :href="item.link"
+    >
       <v-icon>{{ item.icon }}</v-icon>
     </a>
   </span>

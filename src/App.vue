@@ -19,7 +19,7 @@ export default defineComponent({
       () => {
         toggleScroll();
       },
-      { deep: true, immediate: true }
+      { deep: true, immediate: true },
     );
 
     // disable scrolling for landing page

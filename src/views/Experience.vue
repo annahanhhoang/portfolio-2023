@@ -10,7 +10,10 @@
         :key="`experience${index}`"
         dot-color="primary"
       >
-        <template v-if="mdAndUp" v-slot:opposite>
+        <template
+          v-if="mdAndUp"
+          v-slot:opposite
+        >
           <span class="timeline-duration">{{ item.duration }}</span>
         </template>
 
@@ -22,7 +25,11 @@
 
           <v-card-text>
             <p>{{ item.responsibility }}</p>
-            <v-chip v-for="(skill, i) in item.tech" :key="`skill${i}`" class="mr-2 mt-2">
+            <v-chip
+              v-for="(skill, i) in item.tech"
+              :key="`skill${i}`"
+              class="mr-2 mt-2"
+            >
               {{ skill }}
             </v-chip>
           </v-card-text>

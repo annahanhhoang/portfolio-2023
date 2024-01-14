@@ -1,9 +1,16 @@
 <template>
   <div>
-    <v-app-bar v-if="mdAndDown" position="fixed" class="no-print">
+    <v-app-bar
+      v-if="mdAndDown"
+      position="fixed"
+      class="no-print"
+    >
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <social-link class="mr-4" :xl="true"></social-link>
+      <social-link
+        class="mr-4"
+        :xl="true"
+      ></social-link>
     </v-app-bar>
 
     <!--
@@ -11,10 +18,18 @@
       **   SIDE MENU
       **
       -->
-    <v-navigation-drawer v-model="drawer" class="app-side-menu">
+    <v-navigation-drawer
+      v-model="drawer"
+      class="app-side-menu"
+    >
       <v-list>
         <v-list-item class="text-center">
-          <v-img class="mt-4 mx-auto" src="@/assets/logo.svg" width="192" height="192" />
+          <v-img
+            class="mt-4 mx-auto"
+            src="@/assets/logo.svg"
+            width="192"
+            height="192"
+          />
 
           <p class="text-h4">Anna Hoang</p>
 
@@ -24,8 +39,16 @@
 
       <v-divider />
 
-      <v-list nav :lines="false">
-        <v-list-item v-for="item in menu" :key="item.title" :target="item.target" :to="item.to">
+      <v-list
+        nav
+        :lines="false"
+      >
+        <v-list-item
+          v-for="item in menu"
+          :key="item.title"
+          :target="item.target"
+          :to="item.to"
+        >
           <template v-slot:prepend>
             <v-icon :icon="item.icon"></v-icon>
           </template>
@@ -36,7 +59,10 @@
         </v-list-item>
       </v-list>
       <template v-slot:append>
-        <social-link v-if="mdAndUp" class="mb-6"></social-link>
+        <social-link
+          v-if="mdAndUp"
+          class="mb-6"
+        ></social-link>
       </template>
     </v-navigation-drawer>
 
@@ -46,10 +72,22 @@
         **
     -->
     <v-container class="home-page">
-      <about id="about-section" class="my-4" />
-      <experience id="experience-section" class="mb-4" />
-      <skill id="skill-section" class="mb-4" />
-      <projects id="projects-section" class="mb-4" />
+      <about
+        id="about-section"
+        class="my-4"
+      />
+      <experience
+        id="experience-section"
+        class="mb-4"
+      />
+      <skill
+        id="skill-section"
+        class="mb-4"
+      />
+      <projects
+        id="projects-section"
+        class="mb-4"
+      />
     </v-container>
 
     <!--
@@ -58,8 +96,16 @@
         **
     -->
 
-    <v-footer app height="auto" class="justify-center align-center no-print">
-      <v-card class="flex" flat rounded="0">
+    <v-footer
+      app
+      height="auto"
+      class="justify-center align-center no-print"
+    >
+      <v-card
+        class="flex"
+        flat
+        rounded="0"
+      >
         <v-card-actions class="justify-center">
           <p>&copy;{{ currentYear }} - <strong>Anna Hoang</strong></p>
         </v-card-actions>

@@ -13,33 +13,65 @@
         <h1 class="text-h4">Anna Hoang</h1>
         <p class="font-weight-medium mb-1">Green card holder</p>
         <v-row no-gutters>
-          <v-col cols="12" sm="7">
+          <v-col
+            cols="12"
+            sm="7"
+          >
             <p class="d-inline-block mr-6">
-              <v-icon class="mr-2" color="primary" icon="mdi-email" />
+              <v-icon
+                class="mr-2"
+                color="primary"
+                icon="mdi-email"
+              />
               <a href="mailto:anna.hoang.job@gmail.com"></a>anna.hoang.job@gmail.com
             </p>
           </v-col>
-          <v-col cols="12" sm="5">
+          <v-col
+            cols="12"
+            sm="5"
+          >
             <p class="d-inline-block">
-              <v-icon class="mr-2" color="primary" icon="mdi-phone" />
+              <v-icon
+                class="mr-2"
+                color="primary"
+                icon="mdi-phone"
+              />
               <a href="">1 469 831 0504</a>
             </p>
           </v-col>
-          <v-col cols="12" sm="7">
+          <v-col
+            cols="12"
+            sm="7"
+          >
             <p>
-              <v-icon class="mr-2" color="primary" icon="mdi-github" />
+              <v-icon
+                class="mr-2"
+                color="primary"
+                icon="mdi-github"
+              />
               <a href="https://github.com/annahanhhoang">https://github.com/annahanhhoang</a>
             </p>
           </v-col>
-          <v-col cols="12" sm="5">
+          <v-col
+            cols="12"
+            sm="5"
+          >
             <p>
-              <v-icon class="mr-2" color="primary" icon="mdi-web" />
+              <v-icon
+                class="mr-2"
+                color="primary"
+                icon="mdi-web"
+              />
               <a href="https://annahoang.dev">https://annahoang.dev</a>
             </p>
           </v-col>
           <v-col cols="12">
             <p>
-              <v-icon class="mr-2" color="primary" icon="mdi-linkedin" />
+              <v-icon
+                class="mr-2"
+                color="primary"
+                icon="mdi-linkedin"
+              />
               <a href="https://www.linkedin.com/in/anna-hoang-67023654/"
                 >https://www.linkedin.com/in/anna-hoang-67023654/</a
               >
@@ -66,10 +98,19 @@
       -->
       <section class="mb-6">
         <h2 class="text-body-1 text-primary text-uppercase font-weight-medium mb-2">
-          <v-icon color="primary" class="mr-2">mdi-lightbulb-on</v-icon>SKILLS
+          <v-icon
+            color="primary"
+            class="mr-2"
+            >mdi-lightbulb-on</v-icon
+          >SKILLS
         </h2>
         <ul class="ml-6">
-          <li v-for="(item, i) in skills" :key="`skill${i}`">{{ item }}</li>
+          <li
+            v-for="(item, i) in skills"
+            :key="`skill${i}`"
+          >
+            {{ item }}
+          </li>
         </ul>
       </section>
 
@@ -78,15 +119,26 @@
       -->
       <section class="mb-6">
         <h2 class="text-body-1 text-primary text-uppercase font-weight-medium mb-2">
-          <v-icon color="primary" class="mr-2">mdi-briefcase</v-icon>EXPERIENCES
+          <v-icon
+            color="primary"
+            class="mr-2"
+            >mdi-briefcase</v-icon
+          >EXPERIENCES
         </h2>
 
-        <section v-for="(item, i) in experiences" :key="`experience${i}`" class="mb-3">
+        <section
+          v-for="(item, i) in experiences"
+          :key="`experience${i}`"
+          class="mb-3"
+        >
           <h6 class="text-h6">{{ item.position }}</h6>
           <p>{{ item.company }} - {{ item.location }}</p>
           <p class="mb-4">{{ item.duration }}</p>
           <ul class="ml-6">
-            <li v-for="(desc, idx) in item.achievement" :key="`ar${idx}`">
+            <li
+              v-for="(desc, idx) in item.achievement"
+              :key="`ar${idx}`"
+            >
               {{ desc }}
             </li>
           </ul>
@@ -98,9 +150,17 @@
       -->
       <section class="mb-6">
         <h2 class="text-body-1 text-primary text-uppercase font-weight-medium mb-2">
-          <v-icon color="primary" class="mr-2">mdi-school</v-icon>EDUCATION
+          <v-icon
+            color="primary"
+            class="mr-2"
+            >mdi-school</v-icon
+          >EDUCATION
         </h2>
-        <div v-for="(item, i) in edu" :key="`edu${i}`" class="mb-4">
+        <div
+          v-for="(item, i) in edu"
+          :key="`edu${i}`"
+          class="mb-4"
+        >
           <p class="text-h6">{{ item.degree }}</p>
           <p>{{ item.school }}, {{ item.time }}</p>
         </div>
@@ -111,10 +171,19 @@
       -->
       <section class="mb-6">
         <h2 class="text-body-1 text-primary text-uppercase font-weight-medium mb-2">
-          <v-icon color="primary" class="mr-2">mdi-information</v-icon>ADDITIONAL INFORMATION
+          <v-icon
+            color="primary"
+            class="mr-2"
+            >mdi-information</v-icon
+          >ADDITIONAL INFORMATION
         </h2>
         <ul class="ml-6">
-          <li v-for="(item, i) in additionalInfo" :key="`info${i}`">{{ item }}</li>
+          <li
+            v-for="(item, i) in additionalInfo"
+            :key="`info${i}`"
+          >
+            {{ item }}
+          </li>
         </ul>
       </section>
     </div>

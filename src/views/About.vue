@@ -1,9 +1,17 @@
 <template>
-  <v-row align="strech" class="about-page">
+  <v-row
+    align="strech"
+    class="about-page"
+  >
     <!--
       LEFT COLUMN
     -->
-    <v-col cols="12" md="7" xl="6" class="pt-0">
+    <v-col
+      cols="12"
+      md="7"
+      xl="6"
+      class="pt-0"
+    >
       <!--
         WHO I AM SECTION
       -->
@@ -52,27 +60,71 @@
             CONTACT INFO SECTION
           -->
 
-      <v-row align="center" dense>
-        <v-col cols="4" md="5" xl="2" class="text-primary text-uppercase font-weight-medium"
+      <v-row
+        align="center"
+        dense
+      >
+        <v-col
+          cols="4"
+          md="5"
+          xl="2"
+          class="text-primary text-uppercase font-weight-medium"
           ><p>LOCATION:</p>
         </v-col>
-        <v-col cols="8" md="7" xl="10"><p>Dallas, Texas</p> </v-col>
-        <v-col cols="4" sm="4" md="5" xl="2" class="text-primary text-uppercase font-weight-medium"
+        <v-col
+          cols="8"
+          md="7"
+          xl="10"
+          ><p>Dallas, Texas</p>
+        </v-col>
+        <v-col
+          cols="4"
+          sm="4"
+          md="5"
+          xl="2"
+          class="text-primary text-uppercase font-weight-medium"
           ><p>EMAIL:</p>
         </v-col>
-        <v-col cols="8" sm="8" md="7" xl="10">
-          <a href="mailto:anna.hoang.job@gmail.com" target="_top">
+        <v-col
+          cols="8"
+          sm="8"
+          md="7"
+          xl="10"
+        >
+          <a
+            href="mailto:anna.hoang.job@gmail.com"
+            target="_top"
+          >
             <p>anna.hoang.job@gmail.com</p>
           </a>
         </v-col>
-        <v-col cols="4" md="5" xl="2" class="text-primary text-uppercase font-weight-medium">
+        <v-col
+          cols="4"
+          md="5"
+          xl="2"
+          class="text-primary text-uppercase font-weight-medium"
+        >
           <p>PHONE:</p>
         </v-col>
-        <v-col cols="8" md="7" xl="10">469-831-0504</v-col>
-        <v-col cols="4" md="5" xl="2" class="text-primary text-uppercase font-weight-medium">
+        <v-col
+          cols="8"
+          md="7"
+          xl="10"
+          >469-831-0504</v-col
+        >
+        <v-col
+          cols="4"
+          md="5"
+          xl="2"
+          class="text-primary text-uppercase font-weight-medium"
+        >
           <p>RESUME:</p>
         </v-col>
-        <v-col cols="8" md="7" xl="10">
+        <v-col
+          cols="8"
+          md="7"
+          xl="10"
+        >
           <Resume></Resume>
         </v-col>
       </v-row>
@@ -81,14 +133,23 @@
     <!--
       RIGHT COLUMN
     -->
-    <v-col v-if="mdAndUp" md="5" offset-xl="2" xl="4">
+    <v-col
+      v-if="mdAndUp"
+      md="5"
+      offset-xl="2"
+      xl="4"
+    >
       <!--
         SIDE IMAGE SECTION
       -->
       <div class="mb-6 w-75 mx-auto bg-primary text-white talk-bubble rounded-xl">
         <p class="pa-5 text-center">Let's build something great together!</p>
       </div>
-      <v-img cover src="@/assets/avatar.jpg"> </v-img>
+      <v-img
+        cover
+        src="@/assets/avatar.jpg"
+      >
+      </v-img>
     </v-col>
   </v-row>
 </template>

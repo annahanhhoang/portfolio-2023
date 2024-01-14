@@ -1,15 +1,30 @@
 <template>
   <v-row class="project-page">
-    <v-col cols="12" class="py-0">
+    <v-col
+      cols="12"
+      class="py-0"
+    >
       <!--
         BEGIN WHAT I HAVE DONE
       -->
       <h2 class="text-h4 text-primary mb-4">What I have done</h2>
-      <v-carousel light :show-arrows="false" :cycle="false" :height="carouselHeight">
-        <v-carousel-item v-for="(item, i) in projects" :key="i">
+      <v-carousel
+        light
+        :show-arrows="false"
+        :cycle="false"
+        :height="carouselHeight"
+      >
+        <v-carousel-item
+          v-for="(item, i) in projects"
+          :key="i"
+        >
           <v-container>
             <v-row align="stretch">
-              <v-col cols="12" md="5" lg="3">
+              <v-col
+                cols="12"
+                md="5"
+                lg="3"
+              >
                 <component
                   class="d-block text-h6 mb-1"
                   :href="item.link"
@@ -17,7 +32,10 @@
                   target="_blank"
                   >{{ item.name }}</component
                 >
-                <p class="mb-6"><v-icon class="mr-1">mdi-calendar-range</v-icon> {{ item.date }}</p>
+                <p class="mb-6">
+                  <v-icon class="mr-1">mdi-calendar-range</v-icon>
+                  {{ item.date }}
+                </p>
 
                 <p class="mb-6">{{ item.desc }}</p>
 
@@ -31,10 +49,23 @@
                   :width="logoWidth"
                 />
               </v-col>
-              <v-col cols="12" md="7" lg="9">
-                <v-img :eager="true" max-height="725" max-width="100%" :src="imageURL(item.src)">
+              <v-col
+                cols="12"
+                md="7"
+                lg="9"
+              >
+                <v-img
+                  :eager="true"
+                  max-height="725"
+                  max-width="100%"
+                  :src="imageURL(item.src)"
+                >
                   <template v-slot:placeholder>
-                    <v-row class="fill-height ma-0" align="center" justify="center">
+                    <v-row
+                      class="fill-height ma-0"
+                      align="center"
+                      justify="center"
+                    >
                       <v-progress-circular
                         indeterminate
                         color="grey-lighten-5"

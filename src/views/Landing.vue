@@ -1,11 +1,31 @@
 <template>
-  <v-row class="landing-page fill-height" align="center" justify="center" no-gutters>
-    <v-col cols="12" sm="8" md="4">
+  <v-row
+    class="landing-page fill-height"
+    align="center"
+    justify="center"
+    no-gutters
+  >
+    <v-col
+      cols="12"
+      sm="8"
+      md="4"
+    >
       <v-row no-gutters>
-        <v-col cols="12" md="6" offset-md="3">
-          <v-img class="mb-6" height="92" src="@/assets/logos/google-logo.svg" />
+        <v-col
+          cols="12"
+          md="6"
+          offset-md="3"
+        >
+          <v-img
+            class="mb-6"
+            height="92"
+            src="@/assets/logos/google-logo.svg"
+          />
         </v-col>
-        <v-col cols="12" class="mb-7">
+        <v-col
+          cols="12"
+          class="mb-7"
+        >
           <v-text-field
             id="txtSearch"
             ref="txtSearch"
@@ -18,15 +38,36 @@
               <p class="search-text anim-typewriter">Anna Hoang full stack developer</p>
             </template>
             <template v-slot:append-inner>
-              <v-img class="mr-4" src="@/assets/google-voice.svg" width="24px" height="24px" />
-              <v-img src="@/assets/google-image.svg" width="24px" height="24px" />
+              <v-img
+                class="mr-4"
+                src="@/assets/google-voice.svg"
+                width="24px"
+                height="24px"
+              />
+              <v-img
+                src="@/assets/google-image.svg"
+                width="24px"
+                height="24px"
+              />
             </template>
           </v-text-field>
         </v-col>
-        <v-col v-if="mdAndUp" md="12" class="text-md-center">
-          <v-btn variant="flat" class="text-capitalize mr-4">Google Search</v-btn>
+        <v-col
+          v-if="mdAndUp"
+          md="12"
+          class="text-md-center"
+        >
+          <v-btn
+            variant="flat"
+            class="text-capitalize mr-4"
+            >Google Search</v-btn
+          >
 
-          <v-btn variant="flat" class="text-capitalize ml-4">I'm feeling lucky</v-btn>
+          <v-btn
+            variant="flat"
+            class="text-capitalize ml-4"
+            >I'm feeling lucky</v-btn
+          >
         </v-col>
       </v-row>
     </v-col>
@@ -67,7 +108,8 @@ export default defineComponent({
   }
   /* Animation */
   .anim-typewriter {
-    animation: typewriter 4s steps(31) 1s 1 normal both,
+    animation:
+      typewriter 4s steps(31) 1s 1 normal both,
       blinkTextCursor 500ms steps(31) infinite normal;
   }
 

@@ -1,5 +1,8 @@
 <template>
-  <v-row justify="space-around" class="skill-page">
+  <v-row
+    justify="space-around"
+    class="skill-page"
+  >
     <v-col cols="12">
       <h2 class="text-h4 text-primary mb-4">What I know</h2>
     </v-col>
@@ -7,7 +10,13 @@
     <!--
             BEGIN MY EDUCATION SECTION
     -->
-    <v-col cols="12" md="6" xl="4" offset-xl="1" class="edu-content py-0">
+    <v-col
+      cols="12"
+      md="6"
+      xl="4"
+      offset-xl="1"
+      class="edu-content py-0"
+    >
       <h2>My education</h2>
       <v-alert
         v-for="item in edu"
@@ -25,15 +34,28 @@
     <!--
             BEGIN MY SKILLS SECTION
     -->
-    <v-col cols="12" md="6" xl="6" offset-xl="1" class="py-0">
+    <v-col
+      cols="12"
+      md="6"
+      xl="6"
+      offset-xl="1"
+      class="py-0"
+    >
       <h2>My skills</h2>
-      <div class="mb-4" v-for="item in skills" :key="item.category">
+      <div
+        class="mb-4"
+        v-for="item in skills"
+        :key="item.category"
+      >
         <p class="skills-title text-primary text-uppercase font-weight-medium">
           {{ item.category }}
         </p>
-        <v-chip v-for="(skill, i) in item.skillList" :key="`skill${i}`" class="mr-2 mt-2">{{
-          skill
-        }}</v-chip>
+        <v-chip
+          v-for="(skill, i) in item.skillList"
+          :key="`skill${i}`"
+          class="mr-2 mt-2"
+          >{{ skill }}</v-chip
+        >
       </div>
     </v-col>
   </v-row>
