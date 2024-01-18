@@ -125,7 +125,7 @@
           md="7"
           xl="10"
         >
-          <Resume></Resume>
+          <Resume />
         </v-col>
       </v-row>
     </v-col>
@@ -154,23 +154,11 @@
   </v-row>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import { useDisplay } from 'vuetify';
-
 import Resume from '@/components/ResumeDownload.vue';
 
-export default defineComponent({
-  components: {
-    // Resume download component
-    Resume,
-  },
-
-  setup() {
-    const { mdAndUp, lgAndUp } = useDisplay();
-    return { mdAndUp, lgAndUp };
-  },
-});
+const { mdAndUp, lgAndUp } = useDisplay();
 </script>
 
 <style lang="scss" scoped>

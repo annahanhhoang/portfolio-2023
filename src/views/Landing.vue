@@ -74,25 +74,20 @@
   </v-row>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+<script setup lang="ts">
+import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useDisplay } from 'vuetify';
 
-export default defineComponent({
-  setup() {
-    onMounted(() => {
-      const router = useRouter();
+onMounted(() => {
+  const router = useRouter();
 
-      setTimeout(() => {
-        router.push({ name: 'home' });
-      }, 6500);
-    });
-
-    const { mdAndUp } = useDisplay();
-    return { mdAndUp };
-  },
+  setTimeout(() => {
+    router.push({ name: 'home' });
+  }, 6500);
 });
+
+const { mdAndUp } = useDisplay();
 </script>
 
 <style lang="scss" scoped>
@@ -108,8 +103,7 @@ export default defineComponent({
   }
   /* Animation */
   .anim-typewriter {
-    animation:
-      typewriter 4s steps(31) 1s 1 normal both,
+    animation: typewriter 4s steps(31) 1s 1 normal both,
       blinkTextCursor 500ms steps(31) infinite normal;
   }
 

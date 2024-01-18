@@ -114,8 +114,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { useDisplay } from 'vuetify';
 
@@ -126,65 +126,45 @@ import projects from '@/views/Projects.vue';
 
 import SocialLink from '@/components/SocialLink.vue';
 
-export default defineComponent({
-  components: {
-    about,
-    experience,
-    skill,
-    projects,
-    SocialLink,
+const route = useRoute();
+
+const drawer = ref(true);
+const menu = [
+  { title: 'Home', icon: 'mdi-home', to: '/home' },
+  {
+    title: 'About Me',
+    icon: 'mdi-account',
+    to: '/home#about-section',
+    target: '_self',
   },
-
-  setup() {
-    const route = useRoute();
-
-    const drawer = ref(true);
-    const menu = [
-      { title: 'Home', icon: 'mdi-home', to: '/home' },
-      {
-        title: 'About Me',
-        icon: 'mdi-account',
-        to: '/home#about-section',
-        target: '_self',
-      },
-      {
-        title: 'Experience',
-        icon: 'mdi-briefcase',
-        to: '/home#experience-section',
-        target: '_self',
-      },
-      {
-        title: 'Skills and Educations',
-        icon: 'mdi-school',
-        to: '/home#skill-section',
-        target: '_self',
-      },
-      {
-        title: 'My Projects',
-        icon: 'mdi-lightbulb-on',
-        to: '/home#projects-section',
-        target: '_self',
-      },
-      {
-        title: 'Resume',
-        icon: 'mdi-file',
-        to: '/resume',
-        target: '_blank',
-      },
-    ];
-    const currentYear = new Date().getFullYear();
-
-    const { mdAndDown, mdAndUp } = useDisplay();
-
-    return {
-      currentYear,
-      drawer,
-      menu,
-      mdAndDown,
-      mdAndUp,
-    };
+  {
+    title: 'Experience',
+    icon: 'mdi-briefcase',
+    to: '/home#experience-section',
+    target: '_self',
   },
-});
+  {
+    title: 'Skills and Educations',
+    icon: 'mdi-school',
+    to: '/home#skill-section',
+    target: '_self',
+  },
+  {
+    title: 'My Projects',
+    icon: 'mdi-lightbulb-on',
+    to: '/home#projects-section',
+    target: '_self',
+  },
+  {
+    title: 'Resume',
+    icon: 'mdi-file',
+    to: '/resume',
+    target: '_blank',
+  },
+];
+const currentYear = new Date().getFullYear();
+
+const { mdAndDown, mdAndUp } = useDisplay();
 </script>
 
 <style lang="scss">

@@ -39,67 +39,60 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import { useDisplay } from 'vuetify';
 
-export default defineComponent({
-  setup() {
-    const experiences = [
-      {
-        company: 'LTK',
-        position: 'Senior Software Engineer II',
-        duration: 'Oct 2019 - current',
-        responsibility:
-          'Developed a responsive website for consumers to shop curated content from creators. \n ',
-        tech: ['Vue.js', 'Nuxt', 'TypeScript', 'Vuetify', 'SCSS'],
-      },
-      {
-        company: 'Fujitsu Network Communication',
-        position: 'Full Stack Developer II',
-        duration: 'Sep 2018 - Sep 2019',
-        responsibility: "Developed the Network Operation Center's real-time dashboard",
-        tech: [
-          'Vue.js',
-          'Vuetify',
-          'NodeJS (Express)',
-          'REST API',
-          'webpack',
-          'docker',
-          'nginx',
-          'MySQL',
-          'Oracle',
-        ],
-      },
-      {
-        company: 'GoQuo',
-        position: 'Front-end Developer',
-        duration: 'Jul 2017 - July 2018 ',
-        responsibility: "Redesigned and created new clients' holiday packages booking sites.",
-        tech: ['Vue.js', 'Rest API', 'SASS', 'CSS3', 'webpack', 'AWS'],
-      },
-      {
-        company: 'JPMorgan Chase',
-        position: 'Project Lead',
-        duration: 'Jun 2013 - Nov 2016',
-        responsibility:
-          'Led a team of 5 on maintaining, improving and developing new features for a web reporting system',
-        tech: [
-          'Java, JSP',
-          'JavaScript',
-          'jQuery',
-          'Bootstrap',
-          'HTML5',
-          'CSS3',
-          'XML',
-          'Microsoft SQL server',
-        ],
-      },
-    ];
-
-    const { mdAndUp, lgAndUp, smAndDown } = useDisplay();
-
-    return { experiences, mdAndUp, lgAndUp, smAndDown };
+const experiences = [
+  {
+    company: 'LTK',
+    position: 'Senior Software Engineer II',
+    duration: 'Oct 2019 - current',
+    responsibility:
+      'Developed a responsive website for consumers to shop curated content from creators. \n ',
+    tech: ['Vue.js', 'Nuxt', 'TypeScript', 'Vuetify', 'SCSS'],
   },
-});
+  {
+    company: 'Fujitsu Network Communication',
+    position: 'Full Stack Developer II',
+    duration: 'Sep 2018 - Sep 2019',
+    responsibility: "Developed the Network Operation Center's real-time dashboard",
+    tech: [
+      'Vue.js',
+      'Vuetify',
+      'NodeJS (Express)',
+      'REST API',
+      'webpack',
+      'docker',
+      'nginx',
+      'MySQL',
+      'Oracle',
+    ],
+  },
+  {
+    company: 'GoQuo',
+    position: 'Front-end Developer',
+    duration: 'Jul 2017 - July 2018 ',
+    responsibility: "Redesigned and created new clients' holiday packages booking sites.",
+    tech: ['Vue.js', 'Rest API', 'SASS', 'CSS3', 'webpack', 'AWS'],
+  },
+  {
+    company: 'JPMorgan Chase',
+    position: 'Project Lead',
+    duration: 'Jun 2013 - Nov 2016',
+    responsibility:
+      'Led a team of 5 on maintaining, improving and developing new features for a web reporting system',
+    tech: [
+      'Java, JSP',
+      'JavaScript',
+      'jQuery',
+      'Bootstrap',
+      'HTML5',
+      'CSS3',
+      'XML',
+      'Microsoft SQL server',
+    ],
+  },
+];
+
+const { mdAndUp, lgAndUp, smAndDown } = useDisplay();
 </script>

@@ -191,10 +191,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import { useDisplay } from 'vuetify';
 
-export default defineComponent({
+export default {
   setup() {
     const skills = [
       'Strong expertise in HTML 5, CSS 3, SASS, JavaScript, Vue.js, Vuex, Nuxt.js, NodeJS (Express)',
@@ -327,7 +326,7 @@ export default defineComponent({
 
     return { skills, experiences, additionalInfo, edu, mdAndUp };
   },
-});
+};
 </script>
 
 <style lang="scss" scoped>

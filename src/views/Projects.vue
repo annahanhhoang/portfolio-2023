@@ -82,167 +82,156 @@
   </v-row>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from 'vue';
+<script setup lang="ts">
+import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 
-export default defineComponent({
-  setup() {
-    const { name } = useDisplay();
+const { name } = useDisplay();
 
-    const projects = [
+const projects = [
+  {
+    name: 'LTK',
+    link: 'https://www.shopltk.com/',
+    date: 'March 2020 - March 2023',
+    desc: 'LTK is a platform that allows users to shop directly from their favorite creators on Instagram, TikTok, and other social media sites. LTK also allows creators to monetize their content by earning a commission on the products their followers purchase through the platform.',
+    techList: [
       {
-        name: 'LTK',
-        link: 'https://www.shopltk.com/',
-        date: 'March 2020 - March 2023',
-        desc: 'LTK is a platform that allows users to shop directly from their favorite creators on Instagram, TikTok, and other social media sites. LTK also allows creators to monetize their content by earning a commission on the products their followers purchase through the platform.',
-        techList: [
-          {
-            name: 'Vue.js',
-            path: 'logos/vue.svg',
-          },
-          {
-            name: 'Nuxt',
-            path: 'logos/nuxt.svg',
-          },
-          {
-            name: 'Vuetify',
-            path: 'logos/vuetify.svg',
-          },
-          {
-            name: 'SASS',
-            path: 'logos/sass.svg',
-          },
-        ],
-        src: 'ltk.jpg',
+        name: 'Vue.js',
+        path: 'logos/vue.svg',
       },
       {
-        name: 'Talan Consultant (Desktop only)',
-        link: 'https://talan.netlify.app/',
-        date: 'March 2023 - March 2023',
-        desc: 'The Talan Group is a boutique firm who specializes in clinical research, finance, and tech placements',
-        techList: [
-          {
-            name: 'Vue.js',
-            path: 'logos/vue.svg',
-          },
-          {
-            name: 'Nuxt',
-            path: 'logos/nuxt.svg',
-          },
-          {
-            name: 'Vuetify',
-            path: 'logos/vuetify.svg',
-          },
-          {
-            name: 'SASS',
-            path: 'logos/sass.svg',
-          },
-        ],
-        src: 'talan.jpg',
+        name: 'Nuxt',
+        path: 'logos/nuxt.svg',
       },
       {
-        name: 'FNOC Dashboard',
-        link: '',
-        date: 'Oct 2018 - Nov 2018',
-        desc: 'The real-time dashboard contains charts to track alarms, tickets, events, connections and devices. The charts are color-coded base on severity, i.e red is critical, orange is major, yellow is minor, green is clear. ',
-        techList: [
-          {
-            name: 'Vue.js',
-            path: 'logos/vue.svg',
-          },
-          {
-            name: 'Vuetify',
-            path: 'logos/vuetify.svg',
-          },
-          {
-            name: 'SASS',
-            path: 'logos/sass.svg',
-          },
-          {
-            name: 'NodeJS',
-            path: 'logos/node.svg',
-          },
-          {
-            name: 'Maria DB',
-            path: 'logos/mariadb.svg',
-          },
-          {
-            name: 'nginx',
-            path: 'logos/nginx.svg',
-          },
-        ],
-        src: 'dashboard.jpg',
+        name: 'Vuetify',
+        path: 'logos/vuetify.svg',
       },
       {
-        name: 'FNOC Maintenance Tracker',
-        link: '',
-        date: 'Nov 2018 - Mar 2019',
-        desc: "The maintenance tracker, displayed in calendar format, shows the color-coded maintenance windows. Users can view the calendar in week or month format, as well as click on the events to view the event's detail information",
-        techList: [
-          {
-            name: 'Vue.js',
-            path: 'logos/vue.svg',
-          },
-          {
-            name: 'Vuetify',
-            path: 'logos/vuetify.svg',
-          },
-          {
-            name: 'SASS',
-            path: 'logos/sass.svg',
-          },
-          {
-            name: 'NodeJS',
-            path: 'logos/node.svg',
-          },
-          {
-            name: 'Oracle',
-            path: 'logos/oracle.svg',
-          },
-          {
-            name: 'IIS',
-            path: 'logos/iis.svg',
-          },
-        ],
-        src: 'tracker.jpg',
+        name: 'SASS',
+        path: 'logos/sass.svg',
       },
-    ];
-
-    const imageURL = computed(() => {
-      return (name: string) => {
-        return name ? new URL(`/src/assets/${name}`, import.meta.url).href : null;
-      };
-    });
-
-    const carouselHeight = computed(() => {
-      switch (name.value) {
-        case 'xl':
-        case 'lg':
-          return 750;
-        case 'md':
-          return 425;
-        default:
-          return 650;
-      }
-    });
-
-    const logoWidth = computed(() => {
-      switch (name.value) {
-        case 'xl':
-        case 'lg':
-          return 100;
-        default:
-          return 75;
-      }
-    });
-
-    return {
-      projects,
-      imageURL,
-      carouselHeight,
-      logoWidth,
-    };
+    ],
+    src: 'ltk.jpg',
   },
+  {
+    name: 'Talan Consultant (Desktop only)',
+    link: 'https://talan.netlify.app/',
+    date: 'March 2023 - March 2023',
+    desc: 'The Talan Group is a boutique firm who specializes in clinical research, finance, and tech placements',
+    techList: [
+      {
+        name: 'Vue.js',
+        path: 'logos/vue.svg',
+      },
+      {
+        name: 'Nuxt',
+        path: 'logos/nuxt.svg',
+      },
+      {
+        name: 'Vuetify',
+        path: 'logos/vuetify.svg',
+      },
+      {
+        name: 'SASS',
+        path: 'logos/sass.svg',
+      },
+    ],
+    src: 'talan.jpg',
+  },
+  {
+    name: 'FNOC Dashboard',
+    link: '',
+    date: 'Oct 2018 - Nov 2018',
+    desc: 'The real-time dashboard contains charts to track alarms, tickets, events, connections and devices. The charts are color-coded base on severity, i.e red is critical, orange is major, yellow is minor, green is clear. ',
+    techList: [
+      {
+        name: 'Vue.js',
+        path: 'logos/vue.svg',
+      },
+      {
+        name: 'Vuetify',
+        path: 'logos/vuetify.svg',
+      },
+      {
+        name: 'SASS',
+        path: 'logos/sass.svg',
+      },
+      {
+        name: 'NodeJS',
+        path: 'logos/node.svg',
+      },
+      {
+        name: 'Maria DB',
+        path: 'logos/mariadb.svg',
+      },
+      {
+        name: 'nginx',
+        path: 'logos/nginx.svg',
+      },
+    ],
+    src: 'dashboard.jpg',
+  },
+  {
+    name: 'FNOC Maintenance Tracker',
+    link: '',
+    date: 'Nov 2018 - Mar 2019',
+    desc: "The maintenance tracker, displayed in calendar format, shows the color-coded maintenance windows. Users can view the calendar in week or month format, as well as click on the events to view the event's detail information",
+    techList: [
+      {
+        name: 'Vue.js',
+        path: 'logos/vue.svg',
+      },
+      {
+        name: 'Vuetify',
+        path: 'logos/vuetify.svg',
+      },
+      {
+        name: 'SASS',
+        path: 'logos/sass.svg',
+      },
+      {
+        name: 'NodeJS',
+        path: 'logos/node.svg',
+      },
+      {
+        name: 'Oracle',
+        path: 'logos/oracle.svg',
+      },
+      {
+        name: 'IIS',
+        path: 'logos/iis.svg',
+      },
+    ],
+    src: 'tracker.jpg',
+  },
+];
+
+const imageURL = computed(() => {
+  return (name: string) => {
+    return name ? new URL(`/src/assets/${name}`, import.meta.url).href : null;
+  };
+});
+
+const carouselHeight = computed(() => {
+  switch (name.value) {
+    case 'xl':
+    case 'lg':
+      return 750;
+    case 'md':
+      return 425;
+    default:
+      return 650;
+  }
+});
+
+const logoWidth = computed(() => {
+  switch (name.value) {
+    case 'xl':
+    case 'lg':
+      return 100;
+    default:
+      return 75;
+  }
 });
 </script>

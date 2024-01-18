@@ -61,55 +61,50 @@
   </v-row>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      edu: [
-        {
-          school: 'UNIVERSITY OF TEXAS AT DALLAS',
-          degree: 'Bachelor of Science in Software Engineering',
-          time: '2012 - 2014',
-        },
-        {
-          school: 'Richland College',
-          degree: 'Associate of Science in Software Engineering',
-          time: '2010 - 2012',
-        },
-        { school: 'NIIT', degree: 'Software Engineering', time: '2006 - 2009' },
-      ],
-      skills: [
-        {
-          category: 'language',
-          skillList: [
-            'HTML 5',
-            'CSS 3',
-            'SASS',
-            'JavaScript',
-            'NodeJS(Express)',
-            'Java',
-            '.NET',
-            'batch and shell programming',
-          ],
-        },
-        {
-          category: 'Framework',
-          skillList: ['Vue.js', 'Nuxt', 'Vuetify', 'Bootstrap', 'Spring MVC'],
-        },
-        {
-          category: 'Database',
-          skillList: ['MySQL', 'Microsoft SQL Server', 'Oracle'],
-        },
-        {
-          category: 'Source control',
-          skillList: ['GitHub', 'GitLab'],
-        },
-        {
-          category: 'SOFTWARE DEVELOPMENT METHODOLOGY',
-          skillList: ['Agile (Scrum, Kanban)', 'Waterfall', 'V - Model'],
-        },
-      ],
-    };
+<script setup lang="ts">
+const edu = [
+  {
+    school: 'UNIVERSITY OF TEXAS AT DALLAS',
+    degree: 'Bachelor of Science in Software Engineering',
+    time: '2012 - 2014',
   },
-};
+  {
+    school: 'Richland College',
+    degree: 'Associate of Science in Software Engineering',
+    time: '2010 - 2012',
+  },
+  { school: 'NIIT', degree: 'Software Engineering', time: '2006 - 2009' },
+];
+
+const skills = [
+  {
+    category: 'language',
+    skillList: [
+      'HTML 5',
+      'CSS 3',
+      'SASS',
+      'JavaScript',
+      'NodeJS(Express)',
+      'Java',
+      '.NET',
+      'batch and shell programming',
+    ],
+  },
+  {
+    category: 'Framework',
+    skillList: ['Vue.js', 'Nuxt', 'Vuetify', 'Bootstrap', 'Spring MVC'],
+  },
+  {
+    category: 'Database',
+    skillList: ['MySQL', 'Microsoft SQL Server', 'Oracle'],
+  },
+  {
+    category: 'Source control',
+    skillList: ['GitHub', 'GitLab'],
+  },
+  {
+    category: 'SOFTWARE DEVELOPMENT METHODOLOGY',
+    skillList: ['Agile (Scrum, Kanban)', 'Waterfall', 'V - Model'],
+  },
+];
 </script>

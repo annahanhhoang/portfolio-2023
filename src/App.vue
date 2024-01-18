@@ -6,40 +6,31 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent, watch } from 'vue';
+<script setup lang="ts">
+import { watch } from 'vue';
 import { useRoute } from 'vue-router';
 
-export default defineComponent({
-  setup() {
-    const route = useRoute();
+const route = useRoute();
 
-    watch(
-      route,
-      () => {
-        toggleScroll();
-      },
-      { deep: true, immediate: true },
-    );
+// disable scrolling for landing page
+const toggleScroll = () => {
+  const scroll = route.name !== 'landing';
 
-    // disable scrolling for landing page
-    function toggleScroll() {
-      const scroll = route.name !== 'landing';
+  if (!scroll) {
+    document.body.className = 'no-scroll';
+    document.documentElement.className = 'no-scroll';
+  } else {
+    document.documentElement.classList.remove('no-scroll');
+  }
+};
 
-      if (!scroll) {
-        document.body.className = 'no-scroll';
-        document.documentElement.className = 'no-scroll';
-      } else {
-        document.documentElement.classList.remove('no-scroll');
-      }
-    }
-
-    return {
-      route,
-      toggleScroll,
-    };
+watch(
+  route,
+  () => {
+    toggleScroll();
   },
-});
+  { deep: true, immediate: true }
+);
 </script>
 
 <style lang="scss">
