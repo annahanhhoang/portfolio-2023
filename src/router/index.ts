@@ -15,13 +15,6 @@ const routes = [
     component: () => import('@/views/Home.vue'),
     meta: { title: "Anna Hoang - Full-stack Developer's page" },
   },
-
-  {
-    path: '/resume',
-    name: 'resume',
-    component: () => import('@/views/Resume.vue'),
-    meta: { title: 'Anna Hoang - Full-stack Developer resume' },
-  },
 ];
 
 const router = createRouter({

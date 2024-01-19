@@ -5,6 +5,7 @@
       v-for="item in resumes"
       :key="item.id"
       :href="item.link"
+      target="_blank"
     >
       <v-icon>{{ item.icon }}</v-icon>
     </a>
@@ -16,12 +17,12 @@ const resumes = [
   {
     id: 'Word',
     icon: 'mdi-file-word-box',
-    link: 'https://docs.google.com/document/d/114SdHlAJpKpK4h1DuesrqzhL20gOjTsv/edit',
+    link: 'https://docs.google.com/document/d/1JsnisVjwRgWtvzgQBRDtxKX_lReH8JFM/edit?usp=sharing&ouid=110887150260854891452&rtpof=true&sd=true',
   },
   {
     id: 'PDF',
     icon: 'mdi-file-pdf-box',
-    link: 'https://drive.google.com/file/d/1-4odqAIn-GyLpVp8_CRR5LJVn6bQ3etv/view?usp=share_link',
+    link: 'https://drive.google.com/file/d/16ZZ4zXxtunO8IjMh6uXZyodfkRJSx8eZ/view?usp=drive_link',
   },
 ];
 </script>

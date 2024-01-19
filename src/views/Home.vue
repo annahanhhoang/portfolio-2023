@@ -44,7 +44,7 @@
         :lines="false"
       >
         <v-list-item
-          v-for="item in menu"
+          v-for="(item, index) in menu"
           :key="item.title"
           :target="item.target"
           :to="item.to"
@@ -55,6 +55,7 @@
 
           <v-list-item-title>
             {{ item.title }}
+            <Resume v-if="index === menu.length - 1" />
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -124,6 +125,7 @@ import experience from '@/views/Experience.vue';
 import skill from '@/views/Skills.vue';
 import projects from '@/views/Projects.vue';
 
+import Resume from '@/components/ResumeDownload.vue';
 import SocialLink from '@/components/SocialLink.vue';
 
 const route = useRoute();
@@ -158,7 +160,7 @@ const menu = [
   {
     title: 'Resume',
     icon: 'mdi-file',
-    to: '/resume',
+    to: '',
     target: '_blank',
   },
 ];
