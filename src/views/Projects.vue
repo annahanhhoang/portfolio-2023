@@ -111,6 +111,18 @@ const projects = [
         name: 'SASS',
         path: 'logos/sass.svg',
       },
+      {
+        name: 'Cypress',
+        path: 'logos/cypress.svg',
+      },
+      {
+        name: 'Algolia',
+        path: 'logos/algolia.svg',
+      },
+      {
+        name: 'AWS',
+        path: 'logos/aws.svg',
+      },
     ],
     src: 'ltk.jpg',
   },

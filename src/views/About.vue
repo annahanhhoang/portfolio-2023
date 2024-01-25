@@ -38,13 +38,13 @@
         <h2 class="text-h4 text-primary mb-4">Interesting facts about me</h2>
         <ul class="ml-4 mb-4">
           <li>I haved moved across the globe for a job paying 1/6 of what I had made</li>
-          <li>I had to learn to walk again at 29</li>
-          <li>I had to learn to smile again at 32 after getting Bell's Palsy</li>
+          <li>I learned to walk again at 29</li>
+          <li>I learned to smile again at 32 after getting Bell's Palsy</li>
           <li>I have been on a helicopter ride and a hot air ballon ride</li>
           <li>I have got my prescription glasses back from a monkey. Bad monkey!</li>
           <li>
             I have seen a volcano, a green sand beach, a black sand beach, bioluminescent, the
-            original Declaration of Independence, the Constitution and the Bills of Right
+            original Declaration of Independence, the Constitution and the Bills of Rights
           </li>
           <li>I have eaten bugs and insects</li>
           <li>

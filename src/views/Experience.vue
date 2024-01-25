@@ -44,12 +44,32 @@ import { useDisplay } from 'vuetify';
 
 const experiences = [
   {
+    company: 'Beacon Hills Staffing - contract for ADT',
+    position: 'Senior Software Engineer',
+    duration: 'Jun 2023 - Jan 2024',
+    responsibility:
+      'Built a web portal using Vue 3, Prime Vue, and Pinia to aid Care Agents, improving their ability to assist customers',
+    tech: ['Vue.js', 'Pinia', 'PrimeVue', 'Webpack', 'SCSS', 'Vitest', 'Goggle Cloud Platform'],
+  },
+  {
     company: 'LTK',
     position: 'Senior Software Engineer II',
-    duration: 'Oct 2019 - current',
+    duration: 'Oct 2019 - Apr 2023',
     responsibility:
       'Developed a responsive website for consumers to shop curated content from creators. \n ',
-    tech: ['Vue.js', 'Nuxt', 'TypeScript', 'Vuetify', 'SCSS'],
+    tech: [
+      'Vue.js',
+      'Vuex',
+      'Nuxt',
+      'TypeScript',
+      'Vuetify',
+      'Webpack',
+      'SCSS',
+      'Jest',
+      'Cypress',
+      'AWS',
+      'Algolia',
+    ],
   },
   {
     company: 'Fujitsu Network Communication',

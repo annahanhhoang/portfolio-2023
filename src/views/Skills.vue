@@ -80,8 +80,8 @@ const skills = [
   {
     category: 'language',
     skillList: [
-      'HTML 5',
-      'CSS 3',
+      'HTML',
+      'CSS',
       'SASS',
       'JavaScript',
       'NodeJS(Express)',
@@ -92,7 +92,11 @@ const skills = [
   },
   {
     category: 'Framework',
-    skillList: ['Vue.js', 'Nuxt', 'Vuetify', 'Bootstrap', 'Spring MVC'],
+    skillList: ['Vue.js', 'Nuxt', 'Vuetify', 'Tailwind', 'Bootstrap', 'Spring MVC'],
+  },
+  {
+    category: 'Testing',
+    skillList: ['Cypress', 'Jest'],
   },
   {
     category: 'Database',
@@ -103,8 +107,8 @@ const skills = [
     skillList: ['GitHub', 'GitLab'],
   },
   {
-    category: 'SOFTWARE DEVELOPMENT METHODOLOGY',
-    skillList: ['Agile (Scrum, Kanban)', 'Waterfall', 'V - Model'],
+    category: 'Cloud',
+    skillList: ['AWS', 'Azure'],
   },
 ];
 </script>
