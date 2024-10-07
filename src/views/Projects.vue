@@ -221,7 +221,7 @@ const projects = [
 
 const imageURL = computed(() => {
   return (name: string) => {
-    return name ? new URL(`/src/assets/${name}`, import.meta.url).href : null;
+    return name ? new URL(`/src/assets/${name}`, import.meta.url).href : undefined;
   };
 });
 

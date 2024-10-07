@@ -1,6 +1,6 @@
 <template>
   <v-row
-    align="strech"
+    align="stretch"
     class="about-page"
   >
     <!--
