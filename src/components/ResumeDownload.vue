@@ -22,7 +22,7 @@ const resumes = [
   {
     id: 'PDF',
     icon: 'mdi-file-pdf-box',
-    link: 'https://drive.google.com/file/d/16ZZ4zXxtunO8IjMh6uXZyodfkRJSx8eZ/view?usp=drive_link',
+    link: 'https://drive.google.com/file/d/1XuERG0kdo7xOYGHgtGz2qMcvMc694lKX/view?usp=drive_link',
   },
 ];
 </script>

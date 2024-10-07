@@ -19,7 +19,7 @@
       <h2 class="text-h4 text-primary mb-4">Who I am</h2>
 
       <p class="mb-4">
-        I am an Asian girl named Anna, hence the name Asianna. I'm a full time full-stack developer
+        I am an Asian girl named Anna, hence the name Asianna. I'm a full time front-end developer
         and part-time traveller (or vise versa, depend on the season or my mood).
       </p>
       <p class="mb-4">
@@ -37,19 +37,19 @@
       <template v-if="lgAndUp">
         <h2 class="text-h4 text-primary mb-4">Interesting facts about me</h2>
         <ul class="ml-4 mb-4">
-          <li>I haved moved across the globe for a job paying 1/6 of what I had made</li>
+          <li>I moved across the globe for a job paying 1/6 of what I had made</li>
           <li>I learned to walk again at 29</li>
           <li>I learned to smile again at 32 after getting Bell's Palsy</li>
           <li>I have been on a helicopter ride and a hot air ballon ride</li>
-          <li>I have got my prescription glasses back from a monkey. Bad monkey!</li>
+          <li>I got my prescription glasses back from a monkey. Bad monkey!</li>
           <li>
             I have seen a volcano, a green sand beach, a black sand beach, bioluminescent, the
             original Declaration of Independence, the Constitution and the Bills of Rights
           </li>
-          <li>I have eaten bugs and insects</li>
+          <li>I ate bugs and insects</li>
           <li>
-            I have tried on a wedding dress. Things didn't work out and I didn't have a chance to
-            wear it, but it's OK :)
+            I tried on a wedding dress. Things didn't work out and I didn't have a chance to wear
+            it, but it's OK :)
           </li>
         </ul>
       </template>

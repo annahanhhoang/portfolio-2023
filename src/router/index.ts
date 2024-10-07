@@ -6,14 +6,14 @@ const routes = [
     path: '/',
     name: 'landing',
     component: () => import('@/views/Landing.vue'),
-    meta: { title: "Anna Hoang - Full-stack Developer's page" },
+    meta: { title: "Anna Hoang - Front-End Developer's page" },
   },
 
   {
     path: '/home',
     name: 'home',
     component: () => import('@/views/Home.vue'),
-    meta: { title: "Anna Hoang - Full-stack Developer's page" },
+    meta: { title: "Anna Hoang - Front-End Developer's page" },
   },
 ];
 

@@ -19,7 +19,7 @@ const accounts = [
   {
     id: 'LinkedIn',
     icon: 'mdi-linkedin',
-    link: 'https://www.linkedin.com/in/anna-hoang-67023654',
+    link: 'https://www.linkedin.com/in/ahoang-dev/',
   },
   {
     id: 'GitHub',

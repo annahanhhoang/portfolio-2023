@@ -33,7 +33,7 @@
 
           <p class="text-h4">Anna Hoang</p>
 
-          <p class="menu-position">Full-stack Developer</p>
+          <p class="menu-position">Front-End Developer</p>
         </v-list-item>
       </v-list>
 

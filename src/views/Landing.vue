@@ -35,7 +35,7 @@
             variant="outlined"
           >
             <template v-slot:label>
-              <p class="search-text anim-typewriter">Anna Hoang full stack developer</p>
+              <p class="search-text anim-typewriter">Anna Hoang front-end developer</p>
             </template>
             <template v-slot:append-inner>
               <v-img
