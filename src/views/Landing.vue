@@ -35,7 +35,7 @@
             variant="outlined"
           >
             <template v-slot:label>
-              <p class="search-text anim-typewriter">Anna Hoang front-end developer</p>
+              <p class="search-text anim-typewriter">Anna Hoang senior dev</p>
             </template>
             <template v-slot:append-inner>
               <v-img
@@ -83,7 +83,7 @@ onMounted(() => {
   const router = useRouter();
 
   setTimeout(() => {
-    router.push({ name: 'home' });
+    router.push({ name: 'about' });
   }, 6500);
 });
 

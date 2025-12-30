@@ -18,10 +18,7 @@
       **   SIDE MENU
       **
       -->
-    <v-navigation-drawer
-      v-model="drawer"
-      class="app-side-menu"
-    >
+    <v-navigation-drawer v-model="drawer">
       <v-list>
         <v-list-item class="text-center">
           <v-img
@@ -167,6 +164,8 @@ const menu = [
 const currentYear = new Date().getFullYear();
 
 const { mdAndDown, mdAndUp } = useDisplay();
+const props = defineProps({ blok: Object });
+console.log('props', props);
 </script>
 
 <style lang="scss">

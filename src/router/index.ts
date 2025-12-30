@@ -4,15 +4,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    name: 'landing',
+    name: 'home',
     component: () => import('@/views/Landing.vue'),
     meta: { title: "Anna Hoang - Front-End Developer's page" },
   },
 
   {
-    path: '/home',
-    name: 'home',
-    component: () => import('@/views/Home.vue'),
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/About.vue'),
     meta: { title: "Anna Hoang - Front-End Developer's page" },
   },
 ];

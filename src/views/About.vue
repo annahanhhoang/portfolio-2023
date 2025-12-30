@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+import { richTextResolver } from '@storyblok/richtext';
+import { useDisplay } from 'vuetify';
+import Resume from '@/components/ResumeDownload.vue';
+
+const props = defineProps({ blok: Object });
+console.log('props', props);
+const { render } = richTextResolver();
+const whoIAm = computed(() => render(props.blok.who_I_am));
+const interestingFacts = computed(() => render(props.blok.interesting_facts));
+const { mdAndUp, lgAndUp } = useDisplay();
+</script>
+
 <template>
   <v-row
     align="stretch"
@@ -15,44 +29,16 @@
       <!--
         WHO I AM SECTION
       -->
+      <!-- <div
+        class="mb-4"
+        v-html="whoIAm"
+      />
 
-      <h2 class="text-h4 text-primary mb-4">Who I am</h2>
-
-      <p class="mb-4">
-        I am an Asian girl named Anna, hence the name Asianna. I'm a full time front-end developer
-        and part-time traveller (or vise versa, depend on the season or my mood).
-      </p>
-      <p class="mb-4">
-        I have over 10 years of experience working as a web/software developer. I have worked in big
-        corporates (J.P.Morgan, Fujitsu Network Communication, etc.) as well as small start-up
-        environment. Professionally, I specialize in Vue.js, Nuxt, Vuetify, Node.js (Express). I can
-        also do database/server management and basic graphic design.
-      </p>
-      <p class="mb-4">
-        When I'm not sitting in front of a laptop, I specialize in hopping around. I've travelled to
-        15 countries and lived in 3. So far, Myanmar has been the most interesting place I've ever
-        been to.
-      </p>
-
-      <template v-if="lgAndUp">
-        <h2 class="text-h4 text-primary mb-4">Interesting facts about me</h2>
-        <ul class="ml-4 mb-4">
-          <li>I moved across the globe for a job paying 1/6 of what I had made</li>
-          <li>I learned to walk again at 29</li>
-          <li>I learned to smile again at 32 after getting Bell's Palsy</li>
-          <li>I have been on a helicopter ride and a hot air ballon ride</li>
-          <li>I got my prescription glasses back from a monkey. Bad monkey!</li>
-          <li>
-            I have seen a volcano, a green sand beach, a black sand beach, bioluminescent, the
-            original Declaration of Independence, the Constitution and the Bills of Rights
-          </li>
-          <li>I ate bugs and insects</li>
-          <li>
-            I tried on a wedding dress. Things didn't work out and I didn't have a chance to wear
-            it, but it's OK :)
-          </li>
-        </ul>
-      </template>
+      <div
+        class="mb-4"
+        v-if="lgAndUp"
+        v-html="interestingFacts"
+      /> -->
 
       <p class="mb-2">Like what you see? I can be reached at:</p>
 
@@ -153,13 +139,6 @@
     </v-col>
   </v-row>
 </template>
-
-<script setup lang="ts">
-import { useDisplay } from 'vuetify';
-import Resume from '@/components/ResumeDownload.vue';
-
-const { mdAndUp, lgAndUp } = useDisplay();
-</script>
 
 <style lang="scss" scoped>
 /* CSS talk bubble */
